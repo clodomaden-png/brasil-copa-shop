@@ -8,7 +8,7 @@ const Footer = () => (
           <div className="flex items-center gap-2 mb-4">
             <Trophy className="h-6 w-6 text-gold" />
             <span className="font-heading font-extrabold text-lg text-card">
-              Copa<span className="text-gold">Store</span>
+              Spike<span className="text-gold"> Sports</span>
             </span>
           </div>
           <p className="text-sm leading-relaxed">
@@ -29,7 +29,7 @@ const Footer = () => (
         <div>
           <h4 className="font-heading font-bold text-card mb-4">Contato</h4>
           <ul className="space-y-2 text-sm">
-            <li className="flex items-center gap-2"><Mail className="h-4 w-4" /> contato@copastore.com.br</li>
+            <li className="flex items-center gap-2"><Mail className="h-4 w-4" /> contato@spikesports.com.br</li>
             <li className="flex items-center gap-2"><Phone className="h-4 w-4" /> (11) 99999-9999</li>
             <li className="flex items-center gap-2"><MapPin className="h-4 w-4" /> São Paulo, SP - Brasil</li>
           </ul>
@@ -57,7 +57,7 @@ const Footer = () => (
       </div>
 
       <div className="border-t border-card/10 pt-6 text-center text-xs">
-        <p>© 2025 CopaStore. Todos os direitos reservados. | Política de Privacidade | Termos de Uso</p>
+        <p>© 2025 Spike Sports. Todos os direitos reservados. | Política de Privacidade | Termos de Uso</p>
       </div>
     </div>
   </footer>

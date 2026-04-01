@@ -19,7 +19,7 @@ const Header = () => {
         <a href="#inicio" className="flex items-center gap-2">
           <Trophy className="h-8 w-8 text-gold" />
           <span className="font-heading font-extrabold text-xl text-primary-foreground tracking-tight">
-            Copa<span className="text-gold">Store</span>
+            Spike<span className="text-gold"> Sports</span>
           </span>
         </a>
 

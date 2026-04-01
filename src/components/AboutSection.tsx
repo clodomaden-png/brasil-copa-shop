@@ -12,7 +12,7 @@ const AboutSection = () => (
     <div className="container mx-auto px-4">
       <div className="max-w-3xl mx-auto text-center mb-12">
         <h2 className="font-heading font-extrabold text-3xl md:text-4xl mb-4">
-          Sobre a <span className="text-gradient-gold">CopaStore</span>
+          Sobre a <span className="text-gradient-gold">Spike Sports</span>
         </h2>
         <p className="text-primary-foreground/80 text-lg leading-relaxed">
           Somos apaixonados por futebol brasileiro. Nascemos com a missão de levar produtos de qualidade
