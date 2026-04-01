@@ -57,7 +57,7 @@ const Footer = () => (
       </div>
 
       <div className="border-t border-card/10 pt-6 text-center text-xs">
-        <p>© 2025 CopaStore. Todos os direitos reservados. | Política de Privacidade | Termos de Uso</p>
+        <p>© 2025 Spike Sports. Todos os direitos reservados. | Política de Privacidade | Termos de Uso</p>
       </div>
     </div>
   </footer>
