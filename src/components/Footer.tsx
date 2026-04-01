@@ -29,7 +29,7 @@ const Footer = () => (
         <div>
           <h4 className="font-heading font-bold text-card mb-4">Contato</h4>
           <ul className="space-y-2 text-sm">
-            <li className="flex items-center gap-2"><Mail className="h-4 w-4" /> contato@copastore.com.br</li>
+            <li className="flex items-center gap-2"><Mail className="h-4 w-4" /> contato@spikesports.com.br</li>
             <li className="flex items-center gap-2"><Phone className="h-4 w-4" /> (11) 99999-9999</li>
             <li className="flex items-center gap-2"><MapPin className="h-4 w-4" /> São Paulo, SP - Brasil</li>
           </ul>
