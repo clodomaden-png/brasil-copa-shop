@@ -8,7 +8,7 @@ const testimonials = [
 ];
 
 const Testimonials = () => (
-  <section id="depoimentos" className="py-16 md:py-24 bg-card">
+  <section id="depoimentos" className="py-16 md:py-24 bg-background">
     <div className="container mx-auto px-4">
       <div className="text-center mb-12">
         <h2 className="font-heading font-extrabold text-3xl md:text-4xl text-foreground mb-3">
@@ -19,15 +19,15 @@ const Testimonials = () => (
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         {testimonials.map((t, i) => (
-          <div key={i} className="bg-muted/30 border border-border rounded-xl p-6 hover:shadow-card transition-shadow">
+          <div key={i} className="bg-card border border-border rounded-xl p-6 hover:shadow-card-hover hover:border-primary/30 transition-all">
             <div className="flex gap-1 mb-3">
               {Array.from({ length: t.rating }).map((_, j) => (
-                <Star key={j} className="h-4 w-4 fill-gold text-gold" />
+                <Star key={j} className="h-4 w-4 fill-primary text-primary" />
               ))}
             </div>
-            <p className="text-card-foreground text-sm leading-relaxed mb-4">"{t.text}"</p>
+            <p className="text-muted-foreground text-sm leading-relaxed mb-4">"{t.text}"</p>
             <div>
-              <p className="font-heading font-bold text-sm text-card-foreground">{t.name}</p>
+              <p className="font-heading font-bold text-sm text-foreground">{t.name}</p>
               <p className="text-muted-foreground text-xs">{t.city}</p>
             </div>
           </div>

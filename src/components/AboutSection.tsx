@@ -8,25 +8,25 @@ const stats = [
 ];
 
 const AboutSection = () => (
-  <section id="sobre" className="py-16 md:py-24 bg-gradient-hero text-primary-foreground">
+  <section id="sobre" className="py-16 md:py-24 bg-card">
     <div className="container mx-auto px-4">
       <div className="max-w-3xl mx-auto text-center mb-12">
-        <h2 className="font-heading font-extrabold text-3xl md:text-4xl mb-4">
-          Sobre a <span className="text-gradient-gold">Spike Sports</span>
+        <h2 className="font-heading font-extrabold text-3xl md:text-4xl mb-4 text-foreground">
+          Sobre a <span className="text-gradient-green">Spike Sports</span>
         </h2>
-        <p className="text-primary-foreground/80 text-lg leading-relaxed">
+        <p className="text-muted-foreground text-lg leading-relaxed">
           Somos apaixonados por futebol brasileiro. Nascemos com a missão de levar produtos de qualidade
           para torcedores de todo o país. Cada item é selecionado com carinho para que você viva a emoção
-          da Copa do Brasil dentro e fora dos estádios.
+          do esporte dentro e fora dos estádios.
         </p>
       </div>
 
       <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
         {stats.map((stat, i) => (
-          <div key={i} className="text-center p-6 bg-primary-foreground/10 rounded-xl backdrop-blur-sm">
-            <stat.icon className="h-8 w-8 mx-auto mb-3 text-gold" />
-            <p className="font-heading font-extrabold text-2xl md:text-3xl">{stat.value}</p>
-            <p className="text-primary-foreground/70 text-sm mt-1">{stat.label}</p>
+          <div key={i} className="text-center p-6 bg-secondary rounded-xl border border-border">
+            <stat.icon className="h-8 w-8 mx-auto mb-3 text-primary" />
+            <p className="font-heading font-extrabold text-2xl md:text-3xl text-foreground">{stat.value}</p>
+            <p className="text-muted-foreground text-sm mt-1">{stat.label}</p>
           </div>
         ))}
       </div>

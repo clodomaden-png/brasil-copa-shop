@@ -14,10 +14,10 @@ const ProductModal = ({ product, onClose }: Props) => {
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 animate-fade-in" onClick={onClose}>
-      <div className="absolute inset-0 bg-foreground/60 backdrop-blur-sm" />
-      <div className="relative bg-card rounded-2xl shadow-2xl max-w-3xl w-full max-h-[90vh] overflow-y-auto animate-slide-up" onClick={(e) => e.stopPropagation()}>
-        <button onClick={onClose} className="absolute top-4 right-4 z-10 bg-card/80 p-2 rounded-full hover:bg-muted transition-colors">
-          <X className="h-5 w-5 text-card-foreground" />
+      <div className="absolute inset-0 bg-background/80 backdrop-blur-sm" />
+      <div className="relative bg-card rounded-2xl shadow-2xl max-w-3xl w-full max-h-[90vh] overflow-y-auto animate-slide-up border border-border" onClick={(e) => e.stopPropagation()}>
+        <button onClick={onClose} className="absolute top-4 right-4 z-10 bg-secondary p-2 rounded-full hover:bg-border transition-colors">
+          <X className="h-5 w-5 text-foreground" />
         </button>
 
         <div className="grid md:grid-cols-2 gap-0">
@@ -28,11 +28,11 @@ const ProductModal = ({ product, onClose }: Props) => {
           <div className="p-6 md:p-8 flex flex-col justify-between">
             <div>
               {product.badge && (
-                <span className="inline-block bg-gold text-secondary-foreground text-xs font-bold px-3 py-1 rounded-full mb-3">
+                <span className="inline-block bg-primary/20 text-primary text-xs font-bold px-3 py-1 rounded-full mb-3 border border-primary/30">
                   {product.badge}
                 </span>
               )}
-              <h2 className="font-heading font-bold text-2xl text-card-foreground mb-3">{product.name}</h2>
+              <h2 className="font-heading font-bold text-2xl text-foreground mb-3">{product.name}</h2>
               <p className="text-muted-foreground text-sm leading-relaxed mb-6">{product.description}</p>
 
               <div className="flex items-baseline gap-3 mb-6">
@@ -53,7 +53,7 @@ const ProductModal = ({ product, onClose }: Props) => {
               </div>
             </div>
 
-            <button onClick={() => { addItem(product); onClose(); }} className="w-full flex items-center justify-center gap-2 bg-gradient-cta text-secondary-foreground font-heading font-bold py-4 rounded-lg shadow-cta hover:scale-[1.02] transition-transform text-lg">
+            <button onClick={() => { addItem(product); onClose(); }} className="w-full flex items-center justify-center gap-2 bg-gradient-cta text-primary-foreground font-heading font-bold py-4 rounded-lg shadow-cta hover:scale-[1.02] transition-transform text-lg">
               <ShoppingCart className="h-5 w-5" />
               Comprar Agora
             </button>

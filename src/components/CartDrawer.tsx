@@ -8,14 +8,14 @@ const CartDrawer = () => {
 
   return (
     <div className="fixed inset-0 z-50 animate-fade-in">
-      <div className="absolute inset-0 bg-foreground/50 backdrop-blur-sm" onClick={() => setIsOpen(false)} />
-      <div className="absolute right-0 top-0 h-full w-full max-w-md bg-card shadow-2xl flex flex-col animate-slide-up">
+      <div className="absolute inset-0 bg-background/70 backdrop-blur-sm" onClick={() => setIsOpen(false)} />
+      <div className="absolute right-0 top-0 h-full w-full max-w-md bg-card shadow-2xl flex flex-col animate-slide-up border-l border-border">
         <div className="flex items-center justify-between p-5 border-b border-border">
-          <h2 className="font-heading font-bold text-xl text-card-foreground flex items-center gap-2">
+          <h2 className="font-heading font-bold text-xl text-foreground flex items-center gap-2">
             <ShoppingBag className="h-5 w-5 text-primary" /> Carrinho
           </h2>
-          <button onClick={() => setIsOpen(false)} className="p-2 hover:bg-muted rounded-full transition-colors">
-            <X className="h-5 w-5" />
+          <button onClick={() => setIsOpen(false)} className="p-2 hover:bg-secondary rounded-full transition-colors">
+            <X className="h-5 w-5 text-muted-foreground" />
           </button>
         </div>
 
@@ -29,10 +29,10 @@ const CartDrawer = () => {
           <>
             <div className="flex-1 overflow-y-auto p-5 space-y-4">
               {items.map((item) => (
-                <div key={item.id} className="flex gap-3 bg-muted/50 rounded-lg p-3">
+                <div key={item.id} className="flex gap-3 bg-secondary rounded-lg p-3">
                   <img src={item.image} alt={item.name} className="w-20 h-20 object-cover rounded-lg" />
                   <div className="flex-1 min-w-0">
-                    <h4 className="font-medium text-sm text-card-foreground line-clamp-1">{item.name}</h4>
+                    <h4 className="font-medium text-sm text-foreground line-clamp-1">{item.name}</h4>
                     <p className="text-primary font-bold text-sm mt-1">R$ {item.price.toFixed(2).replace(".", ",")}</p>
                     <div className="flex items-center gap-2 mt-2">
                       <button onClick={() => updateQuantity(item.id, item.quantity - 1)} className="p-1 bg-card rounded hover:bg-border transition-colors">
@@ -52,11 +52,11 @@ const CartDrawer = () => {
             </div>
 
             <div className="border-t border-border p-5 space-y-4">
-              <div className="flex justify-between text-lg font-heading font-bold text-card-foreground">
+              <div className="flex justify-between text-lg font-heading font-bold text-foreground">
                 <span>Total</span>
                 <span className="text-primary">R$ {total.toFixed(2).replace(".", ",")}</span>
               </div>
-              <button className="w-full bg-gradient-cta text-secondary-foreground font-heading font-bold py-4 rounded-lg shadow-cta hover:scale-[1.02] transition-transform text-lg">
+              <button className="w-full bg-gradient-cta text-primary-foreground font-heading font-bold py-4 rounded-lg shadow-cta hover:scale-[1.02] transition-transform text-lg">
                 Finalizar Compra
               </button>
               <button onClick={clearCart} className="w-full text-muted-foreground text-sm hover:text-destructive transition-colors">

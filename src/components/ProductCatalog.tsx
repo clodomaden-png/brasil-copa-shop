@@ -18,14 +18,14 @@ const ProductCatalog = () => {
   const filtered = filter === "todos" ? products : products.filter((p) => p.category === filter);
 
   return (
-    <section id="produtos" className="py-16 md:py-24 bg-muted/30">
+    <section id="produtos" className="py-16 md:py-24 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="font-heading font-extrabold text-3xl md:text-4xl text-foreground mb-3">
             Nossos <span className="text-primary">Produtos</span>
           </h2>
           <p className="text-muted-foreground max-w-md mx-auto">
-            Encontre tudo para torcer com estilo na Copa do Brasil
+            Encontre tudo para torcer com estilo e performance
           </p>
         </div>
 
@@ -36,8 +36,8 @@ const ProductCatalog = () => {
               onClick={() => setFilter(cat.key)}
               className={`px-5 py-2 rounded-full font-medium text-sm transition-all ${
                 filter === cat.key
-                  ? "bg-primary text-primary-foreground shadow-card"
-                  : "bg-card text-muted-foreground hover:bg-muted border border-border"
+                  ? "bg-primary text-primary-foreground shadow-cta"
+                  : "bg-secondary text-muted-foreground hover:text-foreground border border-border"
               }`}
             >
               {cat.label}

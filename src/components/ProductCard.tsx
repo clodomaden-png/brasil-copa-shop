@@ -15,7 +15,7 @@ const ProductCard = ({ product, onViewDetails }: Props) => {
       <div className="relative overflow-hidden aspect-square">
         <img src={product.image} alt={product.name} loading="lazy" width={400} height={400} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
         {product.badge && (
-          <span className="absolute top-3 left-3 bg-gold text-secondary-foreground text-xs font-bold px-3 py-1 rounded-full">
+          <span className="absolute top-3 left-3 bg-primary text-primary-foreground text-xs font-bold px-3 py-1 rounded-full">
             {product.badge}
           </span>
         )}
@@ -24,8 +24,8 @@ const ProductCard = ({ product, onViewDetails }: Props) => {
             -{Math.round((1 - product.price / product.originalPrice) * 100)}%
           </span>
         )}
-        <div className="absolute inset-0 bg-foreground/0 group-hover:bg-foreground/20 transition-colors flex items-center justify-center opacity-0 group-hover:opacity-100">
-          <button onClick={() => onViewDetails(product)} className="bg-card text-foreground p-3 rounded-full shadow-lg hover:scale-110 transition-transform">
+        <div className="absolute inset-0 bg-background/0 group-hover:bg-background/40 transition-colors flex items-center justify-center opacity-0 group-hover:opacity-100">
+          <button onClick={() => onViewDetails(product)} className="bg-card text-foreground p-3 rounded-full shadow-lg hover:scale-110 transition-transform border border-border">
             <Eye className="h-5 w-5" />
           </button>
         </div>
@@ -43,7 +43,7 @@ const ProductCard = ({ product, onViewDetails }: Props) => {
             </span>
           )}
         </div>
-        <button onClick={() => addItem(product)} className="w-full flex items-center justify-center gap-2 bg-primary text-primary-foreground font-semibold py-2.5 rounded-lg hover:opacity-90 transition-opacity text-sm">
+        <button onClick={() => addItem(product)} className="w-full flex items-center justify-center gap-2 bg-primary text-primary-foreground font-semibold py-2.5 rounded-lg hover:shadow-glow transition-all text-sm">
           <ShoppingCart className="h-4 w-4" />
           Adicionar ao Carrinho
         </button>
