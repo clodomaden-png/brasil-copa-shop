@@ -8,7 +8,7 @@ const Footer = () => (
           <div className="flex items-center gap-2 mb-4">
             <Trophy className="h-6 w-6 text-gold" />
             <span className="font-heading font-extrabold text-lg text-card">
-              Copa<span className="text-gold">Store</span>
+              Spike<span className="text-gold"> Sports</span>
             </span>
           </div>
           <p className="text-sm leading-relaxed">
